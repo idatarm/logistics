@@ -1,0 +1,623 @@
+﻿/*----------------------------------------------------------
+The base color for this template is #5c87b2. If you'd like
+to use a different color start by replacing all instances of
+#5c87b2 with your new color.
+----------------------------------------------------------*/
+/*=================== Design =====================*/
+    /* Structure in .page:
+        - Header
+        - Navigation
+        - PageBody
+            + Content
+            + Sidebar
+        - Footer
+    */
+
+.page {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background:#E6E6E6;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height:17px;
+}
+
+*{
+    margin:0px;
+    padding:0px;
+}
+
+ol, ul {
+    list-style:none;
+}
+a:hover
+{
+    text-decoration:none;
+}
+/* ---------- All ----------*/
+div.layout
+{    
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+}
+
+/* ------- Header -------- #5FB435;*/
+div#header
+{
+    width: 100%;
+    height: 200px; 
+    background:url("../Content/themes/base/images/banner.png") no-repeat;  
+    background-color:#359BED;
+}
+
+div.language
+{
+    float:right;
+    width:150px;    
+    background-color:#5FB435;
+    padding:12px 0;
+    margin-left:10px;
+    text-align:center;    
+}
+.en
+{
+    background:url("../Content/themes/base/images/flag/en.jpg") no-repeat;  
+    background-position:10% 52%;
+}
+.vn
+{
+    background:url("../Content/themes/base/images/flag/vn.png") no-repeat;  
+    background-position:10% 52%;
+}
+
+div.language a
+{
+    color:White;
+    font-size:16px;
+}
+/* ------ Navigation ----- */
+
+div#navigation
+{
+    padding:0px;    
+    margin:15px 0 ;
+}
+
+#input-search
+{
+    border-radius:0px;
+    float:left;
+    height:40px;
+    width:200px;
+    border:1px solid #EEEEEE;
+    border-right:none;
+}
+
+div#input-btn
+{
+    background:url("../Content/themes/base/images/search.png") no-repeat;  
+    float:right;
+    height:40px;
+    width:40px;
+    border:1px solid #EEEEEE;
+}
+
+/* ------------- Page Body -------------- */
+div#pageBody
+{
+    height:1350px;
+    padding:0px;
+    margin:0px;
+}
+
+div#pageBody2
+{
+    height:700px;
+    padding:0px;
+    margin:0px;
+}
+div#pageBody3
+{
+    height:900px;
+    padding:0px;
+    margin:0px;
+}
+div#pageBody4
+{
+    height:1700px;
+    padding:0px;
+    margin:0px;
+}
+div#pageBody5
+{
+    padding:0px;
+    margin:0px;
+}
+div.sidebar
+{   
+    float:right;
+    width: 28%;
+}
+
+/* ----------------- Weather --------------- */
+div.sidebar .weather
+{
+    background:url("../Content/themes/base/images/dt.png") no-repeat;  
+    background-position:center;
+    height:240px;
+    background-color:White;
+}
+/* -------------- Exchange rates ----------------- */
+div.sidebar .exchange-rates
+{
+    height:360px;
+    background-color:white;   
+}
+
+.exchange-rates .table thead th,
+.exchange-rates .table tbody tr>rd
+{
+    text-align:center;
+}
+.exchange-rates .table thead th 
+{
+    padding:20px 0;
+}
+
+.exchange-rates .table tbody tr > td
+{
+    padding-top:14px;
+    padding-bottom:12px;
+}
+/* --------------- Contact websites ----------------*/
+div.sidebar .contact-webs
+{
+    height:155px;
+    background-color:#FF8000;
+}
+
+div.sidebar .contact-webs2
+{
+    height:136px;
+    padding-top:15px; 
+    background-color:#FA824F;
+}
+div.sidebar .contact-webs2 table tr
+{
+    height:30px;
+}
+div.sidebar .contact-webs .left
+{
+    float:left;
+    width:50%;
+    height:inherit;    
+    border-right:0.5px solid #cccccc;
+}
+div.sidebar .contact-webs .right
+{
+    float:right;
+    height:inherit;
+    width:49%;        
+}
+div.sidebar .contact-webs p
+{
+    text-align:center;
+    padding-top:20px;
+}
+div.sidebar .contact-webs h2
+{
+    font-weight:normal;
+    font-size:20px;   
+    font-weight:500; 
+    background-color:inherit;
+    padding-left:38px;
+    color:White;
+    line-height:30px;
+}
+div.sidebar h3
+{
+    background-color:#33cc33;
+    font-size:20px;
+    line-height:50px;
+    margin:0px;
+    padding-left:20px;
+    color:White;
+    font-weight:normal;
+}
+
+
+/* ---------------- Post news ------------------*/
+
+div.post-list
+{
+    background-color:White;
+    height:376px;
+}
+div.post
+{
+    width:inherit;
+    margin-top:7px;
+}
+
+div.post .post-number
+{
+    float:left;
+    background-color:#DC3030;
+    height:15%;
+    width:15%;
+    text-align:center;
+    color:White;
+    font-size:20px;
+    font-weight:600;
+    margin-left:12px;
+    margin-top:15px;
+}
+div.post .post-number h4
+{
+    margin-top:10px;
+    font-weight:500;
+}
+
+div.post .post-right
+{
+    float:right;
+    width:76%;
+    padding-right:5px;
+}
+div.post .post-right a
+{
+    margin:0px;
+    font-size:normal;
+    font-weight:normal;
+    color:#464646;
+}
+div.post .post-right .date
+{
+    background:url("../Content/themes/base/images/date.png") no-repeat;  
+    background-position: 0% 40%;    
+}
+div.post .post-right .date p
+{
+    padding-left:25px;
+}
+div.clear
+{
+    clear:both;
+}
+/* ---------------- Content of page body ------------------ */
+div#content
+{
+    float: left;   
+    width: 70%;
+}
+div.content-header
+{
+    width:100%;
+    height:50px;
+    background-color:#33cc33;
+}
+div.content-header h3
+{
+}
+
+div.content-header h3 img
+{
+    margin-left:10px;
+}
+div.content-header h3 a
+{
+    font-size:20px;
+    line-height:50px;
+    margin:0px;
+    padding-left:20px;
+    color:White;
+    font-weight:normal;
+}
+
+div.product-content
+{ 
+    height:60px;
+    background-color:#DC3030;
+    margin-bottom:20px;
+    margin-top:-20px;
+}
+div.product-content h4
+{
+    color:White;
+    font-size:19px;
+    font-weight:500;
+    text-align:center;
+    margin-top:4px;
+}
+
+/* ========================= News ========================= */
+ul.list-news
+{
+    margin:0px;
+}
+ul.list-news li
+{
+    margin-top:15px;
+    margin-bottom:15px;
+}
+div.date-news
+{
+    height:126px;
+    width:150px;    
+    margin-right:10px;
+    float:left; 
+    padding-top:5px;
+}
+div.cont-news
+{
+    padding-top:3px;
+}
+div.news-title a
+{
+    color:#686868;
+    font-size:18px;
+    font-weight:600;
+}
+div.news-title, div.news-des
+{
+    text-align:justify;
+}
+div.readmore
+{
+    background:url("../Content/themes/base/images/read-more.jpg") no-repeat;  
+    background-position: 100% 50%;
+    float:right;
+    color:#5FB435;
+}
+/* ------------------ Footer -------------------*/
+div#footer
+{
+    margin-top:15px;
+    width: 100%;
+    height:170px;
+    background-color:#33cc33;
+    clear:both;
+}
+
+div#footer img
+{
+    padding-top:20px;
+    padding-left:15px;
+}
+div#footer .iconset
+{
+    margin-top:28px;
+    padding-left:42px;
+    height: 140px;
+    width: 120px;
+}
+div#footer .icon
+{
+    height:50px;
+    width:50px;
+}
+div#footer .icon.fb
+{
+    background:url("../Content/themes/base/images/footer/facebook.png") no-repeat; 
+    float:left;
+}
+div#footer .icon.g-plus
+{
+    background:url("../Content/themes/base/images/footer/gplus.png") no-repeat; 
+    float:right;
+}
+
+div#footer .icon.rss
+{
+    background:url("../Content/themes/base/images/footer/rss.png") no-repeat; 
+    float:left;
+}
+div#footer .icon.twitter
+{
+    background:url("../Content/themes/base/images/footer/twitter.png") no-repeat; 
+    float:right;
+}
+
+/*--------------- About Us ---------------*/
+div.paragraph
+{
+    line-height:25px;
+    font-size:16px;
+    text-align:justify;
+}
+h3.para
+{
+    text-align:center;
+    font-weight:600;
+}
+
+/*--------------- Contact Us ---------------*/
+div.contact 
+{
+    padding-top:5px; 
+    padding-bottom:35px;   
+    text-align:center;
+    font-size:16px;
+}
+
+/* ------ Form Contact -------*/
+div.formContact
+{
+    padding-top:25px; 
+}
+div.formContact input[type="text"], div.formContact textarea,div.formContact input[type="password"]
+{
+    width:90%;       
+    font-size:16px;
+    border-radius:0px;
+    box-shadow:none;
+}
+div.formContact .form-horizontal .controls 
+{
+    margin-left:130px;
+}
+div.formContact .form-horizontal .control-label 
+{
+    width:100px;       
+    font-size:16px;
+}
+
+/* ------ Services -------*/
+div.paragraph ul>li
+{
+    line-height:35px;
+}
+div.services h1
+{
+    font-size:25px;
+    font-weight:600;
+}
+div.services h2
+{
+    font-size:25px;
+    font-weight:600;
+    text-align:center;
+    padding-top:20px;
+    padding-bottom:15px;
+}
+
+div.services h4
+{
+    font-size:20px;
+    font-weight:600;
+    padding-top:20px;
+}
+
+
+
+
+/* ========== CUSTOMER CSS =============*/
+
+
+/*-------- Navigation -----------*/
+.navbar
+{
+    margin-bottom:0px;
+}
+
+.navbar-inner
+{
+    background-color:#33cc33;
+    background-image:none;
+    border:none;
+    border-radius:0px;
+    box-shadow:none;
+    /*min-height:58px;*/    
+}
+
+.navbar .brand
+{
+    padding:18px 20px;
+    color:White;
+}
+.navbar .nav > li > a 
+{
+    padding: 18px 15px;
+    color:White;
+    font-size:18px;
+    font-weight:normal;
+    text-shadow:none;    
+}
+
+/* ----------  Slider : Tròn -> Vuông -------- */
+.carousel-control
+{
+    border-radius:0px;
+}
+
+.carousel-indicators li
+{
+    border-radius:0px;
+}
+
+input[type="search"]
+{
+    border-radius:0px;
+}
+
+/* --------- Form search ----------*/
+.pull-right
+{
+    padding-top:7px;
+    margin-right:-10px;
+}
+#input-search input[type="text"]
+{
+    background-color:#33cc33;
+    border-color:#33cc33;
+    box-shadow:none;
+    width:180px;
+}
+
+#input-search input::-webkit-input-placeholder
+{
+    color:White;
+    font-size:16px;
+}
+
+/*---------- Products --------*/
+.row-fluid
+{
+    margin-top:15px;   
+}
+
+.iframe
+{
+    background-color:#359BED;
+    height:360px;
+    width:inherit;
+    padding-top:10px;
+    padding-left:8px;
+}
+
+.icon-hand-right 
+{
+    padding-left:10px;
+    margin-top:3px;
+}
+
+.icon-user, .icon-envelope 
+{
+    margin-top:3px;
+}
+
+.btn , .btn:hover
+{
+    height:40px;
+    font-size:17px;
+    background-color:#FA824F;
+    border-color:#FA824F;
+    color:White;
+    background-image:none;
+    border-radius:0px;
+    box-shadow:none;
+    text-shadow:none;
+}
+
+.carousel-caption p 
+{
+    text-align:justify;
+}
+
+
+/*========= HELPER ===============*/
+
+
+#form input[type="text"], #form textarea
+{
+    width:80%;
+    font-size:16px;
+}
+
+#form label
+{
+    font-size:16px;
+    padding-top:2px;
+}

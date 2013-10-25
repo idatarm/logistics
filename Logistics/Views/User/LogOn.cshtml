@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Logistics.Models.User>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h4 style="font-size:24px; font-weight:600; text-align:center">Login</h4>
+    @using (Html.BeginForm())
+    {
+        <div class="formContact">     
+  
+        <div class="form-horizontal">
+          <div class="control-group">
+            <label class="control-label" for="inputName">User name:</label>
+            <div class="controls">
+              @Html.TextBox("username", "",new { @placeholder = "Username" })
+            </div>
+          </div>
+          
+          <div class="control-group">
+            <label class="control-label" for="inputEmail">Password:</label>
+            <div class="controls">
+              @Html.Password("password", "",new { @placeholder = "Password" })
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="controls">             
+              <button type="submit" class="btn" style="font-size:17px">Login</button>
+            </div>
+          </div>
+        </div>      
+        
+    </div>
+    }
+    

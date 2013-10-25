@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Contacts";
+    Layout = "~/Views/Shared/_Layout_2.cshtml";
+}
+    <div class="contact">                
+        <h4 style="font-size:24px; font-weight:600; text-align:center; padding-bottom:15px">Contact Us</h4>
+        <h3 class="para">NII Logistics and Trading Company Limited</h3>
+        
+        <p><b>Address:</b> No.12, 27th Street, Binh An Ward, District 2	 Ho Chi Minh City	 Viet Nam</p>
+        <p><b>Email: </b><a href=""> info@nii.com.vn</a></p>
+        <p><b>Telephone:</b> (84 8) 3 740 2081 - (84 8) 3 740 2082</p>
+        <p><b>Fax:</b> (84 8) 3 740 2080</p>
+        <a href="">http://nii.com.vn</a>
+    </div>
+    <h4 style="font-size:24px; font-weight:600; text-align:center">Contact Form</h4>
+    @using (Html.BeginForm("Contact", "Home"))
+    {
+        <div class="formContact">     
+  
+        <div class="form-horizontal">
+          <div class="control-group">
+            <label class="control-label" for="inputName">Name:</label>
+            <div class="controls">
+              @Html.TextBox("inputName", "",new { @placeholder = "Name" })
+            </div>
+          </div>
+          
+          <div class="control-group">
+            <label class="control-label" for="inputEmail">Email:</label>
+            <div class="controls">
+              @Html.TextBox("inputEmail", "",new { @placeholder = "Email" })
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="inputSubject">Subject:</label>
+            <div class="controls">
+               @Html.TextBox("inputSubject", "", new { @placeholder = "Subject" })
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="inputMessage">Message:</label>
+            <div class="controls">
+              @Html.TextArea("inputMessage", "", new { @placeholder = "Message", @rows ="5" })
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="controls">             
+              <button type="submit" class="btn" style="font-size:17px">Send Email</button>
+            </div>
+          </div>
+        </div>      
+        
+    </div>
+    }
+    

@@ -1,0 +1,21 @@
+﻿@model Logistics.Models.Contact
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout_2.cshtml";
+}
+<h3 style="text-align:center; font-size:22px; font-weight:500;">Subject: @Html.DisplayFor(model => model.Subject)</h3>
+<div style="margin-left:200px;">
+
+    <h3 style="font-size:20px; font-weight:500;">Are you sure you want to delete this?</h3>
+    @using (Html.BeginForm()) {
+    
+            <input type="submit" value="Delete" class="btn" style="margin-left:100px;"/>
+            <button class="btn" style="margin-left:20px; background-color:White; border-color:White">
+                @Html.ActionLink("Cancel", "Index")
+            </button>
+    
+    }
+
+</div>
+

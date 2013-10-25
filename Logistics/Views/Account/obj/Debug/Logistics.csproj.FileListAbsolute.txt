@@ -1,0 +1,16 @@
+E:\IT\.NET FRAMWORK\MVC\Source Code\Logistics\Logistics\bin\Logistics.dll
+E:\IT\.NET FRAMWORK\MVC\Source Code\Logistics\Logistics\bin\Logistics.pdb
+E:\IT\.NET FRAMWORK\MVC\Source Code\Logistics\Logistics\bin\EntityFramework.dll
+E:\IT\.NET FRAMWORK\MVC\Source Code\Logistics\Logistics\bin\EntityFramework.xml
+E:\IT\.NET FRAMWORK\MVC\Source Code\Logistics\Logistics\obj\Debug\Logistics.csprojResolveAssemblyReference.cache
+E:\IT\.NET FRAMWORK\MVC\Source Code\Logistics\Logistics\obj\Debug\Logistics.dll
+E:\IT\.NET FRAMWORK\MVC\Source Code\Logistics\Logistics\obj\Debug\Logistics.pdb
+E:\IT\.NET FRAMWORK\MVC\Source Code\MvcSchool\Logistics\Logistics\bin\Logistics.dll
+E:\IT\.NET FRAMWORK\MVC\Source Code\MvcSchool\Logistics\Logistics\bin\Logistics.pdb
+E:\IT\.NET FRAMWORK\MVC\Source Code\MvcSchool\Logistics\Logistics\bin\EntityFramework.dll
+E:\IT\.NET FRAMWORK\MVC\Source Code\MvcSchool\Logistics\Logistics\bin\EntityFramework.xml
+E:\IT\.NET FRAMWORK\MVC\Source Code\MvcSchool\Logistics\Logistics\obj\Debug\Logistics.dll
+E:\IT\.NET FRAMWORK\MVC\Source Code\MvcSchool\Logistics\Logistics\obj\Debug\Logistics.pdb
+E:\IT\.NET FRAMWORK\MVC\Source Code\MvcSchool\Logistics\Logistics\obj\Debug\Logistics.csprojResolveAssemblyReference.cache
+E:\IT\.NET FRAMWORK\MVC\Source Code\MvcSchool\Logistics\Logistics\bin\HtmlAgilityPack.pdb
+E:\IT\.NET FRAMWORK\MVC\Source Code\MvcSchool\Logistics\Logistics\bin\HtmlAgilityPack.xml

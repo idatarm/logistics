@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/_Layout_2.cshtml";
+}
+@Model
+
+<h2>Admin</h2>
+
+<p>@Html.ActionLink("Manage News","Index", "News")</p> <!-- Đến trang quản lý News -->
+<p>@Html.ActionLink("Manage Contacts", "Index", "User")</p> <!-- Đến trang quản lý User -->

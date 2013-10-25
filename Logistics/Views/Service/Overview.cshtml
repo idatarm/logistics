@@ -1,0 +1,82 @@
+﻿@{
+    ViewBag.Title = "Service";
+    Layout = "~/Views/Shared/_Layout_2.cshtml";
+}
+<style>
+   div.date-news 
+   {
+       height:140px;
+       width:140px;       
+   }
+</style>
+
+<h3 style="font-size:24px; font-weight:600; padding-bottom:10px;text-align:center">Subcategories</h3>
+<div>
+    <ul class="list-news">
+        <li>
+            <div class="date-news">
+                <img src="../../Content/themes/base/images/services/custom.jpg" alt="" />
+            </div>
+            <div class="cont-news">
+                <div class="news-title">
+                    @Html.ActionLink("Customs Brokerage", "CustomsBrokerage", "Service")
+                </div>
+                <div class="news-des">
+                    NII Co., Ltd delivers trusted solutions to accurately classify, properly value and swiftly clear your goods through customs ...
+                    
+                </div>
+                <div class="readmore">@Html.ActionLink("Read more  ...", "CustomsBrokerage", "Service")</div>
+            </div>
+            <div class="clear"></div>
+        </li>
+        
+        <li>
+            <div class="date-news">
+                <img src="../../Content/themes/base/images/services/logistics.jpg" alt="" />
+            </div>
+            <div class="cont-news">
+                <div class="news-title">
+                    @Html.ActionLink("Logistics Management", "LogisticsManagement", "Service")
+                </div>
+                <div class="news-des">
+                    NII Co., Ltd delivers an array of value added logistic management services and provides customers with solutions for outsourcing various supply chain functions to increase reliability, gain competitive advantage and improve bottom line results ...
+                    
+                </div>
+                <div class="readmore">@Html.ActionLink("Read more ...", "LogisticsManagement", "Service")</div>
+            </div>
+            <div class="clear"></div>
+        </li>
+
+        <li>
+            <div class="date-news">
+                <img src="../../Content/themes/base/images/services/freight.jpg" alt="" />
+            </div>
+            <div class="cont-news">
+                <div class="news-title">
+                    @Html.ActionLink("Freight Transportation", "FreightTransportation", "Service")
+                </div>
+                <div class="news-des">
+                    Combining our extensive experience and expertise, NII Co., Ltd delivers forwarding solutions that efficiently match customer requirements with cost-effective shipping modes ...                    
+                </div>
+                <div class="readmore">@Html.ActionLink("Read more  ...", "FreightTransportation", "Service")</div>
+            </div>
+            <div class="clear"></div>
+        </li>
+        <li>
+            <div class="date-news">
+                <img src="../../Content/themes/base/images/services/agency business.jpg" alt="" />
+            </div>
+            <div class="cont-news">
+                <div class="news-title">
+                    @Html.ActionLink("Agency Business", "AgencyBusiness", "Service")
+                </div>
+                <div class="news-des">
+                    Our agency service is managed by competent and experienced teams offering ships husbandry, customs business, crew change services, ship stores, spares and victualing services ...
+                    
+                </div>
+                <div class="readmore">@Html.ActionLink("Read more  ...", "AgencyBusiness", "Service")</div>
+            </div>
+            <div class="clear"></div>
+        </li>
+    </ul>
+</div>

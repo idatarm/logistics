@@ -1,0 +1,11 @@
+﻿@model Logistics.Models.News
+@{      
+    Layout = "~/Views/Shared/_Layout_5.cshtml";
+}
+
+
+<h3 style="font-weight:600;color:Blue">@Html.DisplayFor(model => model.Title)</h3>
+
+<p style="text-align:justify;font-size:16px;line-height:24px">@Html.DisplayFor(model => model.Content)</p>
+
+<p style="float:right;padding-top:20px;font-size:16px;padding-bottom:20px;font-weight:bold">Nguồn: @Html.DisplayFor(model => model.Source) (@Html.DisplayFor(model => model.DateTime))</p>

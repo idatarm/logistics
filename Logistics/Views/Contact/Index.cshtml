@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Logistics.Models.Contact>
+
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+     .table th 
+     {
+        font-weight:bold;
+        text-align:center;
+     }   
+     .table td
+     {
+         text-align:justify;
+     }
+</style>
+
+
+<h2 style="font-size:26px;text-align:center;padding-bottom:20px">Manage Contacts </h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Subject
+        </th>
+        <th>*</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Subject)
+        </td>
+        <td>            
+            @Html.ActionLink("Details", "Details", new { id=item.ContactID })
+            @Html.ActionLink("Delete", "Delete", new { id=item.ContactID })
+        </td>
+    </tr>
+}
+
+</table>

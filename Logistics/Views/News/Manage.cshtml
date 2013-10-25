@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Manage";
+}
+
+<div>
+    <ul class="list-news">
+        @{ int i = 0;}
+        @{
+            List<string> ImgUrl = new List<string>();
+            ImgUrl.Add("../../Content/themes/base/images/news/news (8).jpg");
+            ImgUrl.Add("../../Content/themes/base/images/news/news (2).jpg");
+            ImgUrl.Add("../../Content/themes/base/images/news/news (1).jpg");
+            ImgUrl.Add("../../Content/themes/base/images/news/news (3).jpg");
+
+            ImgUrl.Add("../../Content/themes/base/images/news/news (10).jpg");
+            ImgUrl.Add("../../Content/themes/base/images/news/news (4).jpg");
+            ImgUrl.Add("../../Content/themes/base/images/news/news (5).jpg");
+            ImgUrl.Add("../../Content/themes/base/images/news/news (6).jpg");
+            ImgUrl.Add("../../Content/themes/base/images/news/news (9).jpg");
+         }
+        @foreach (var item in Model)
+        {          
+            if(i<9)
+            {                
+                <li>
+                    <div class="date-news">
+                        <img src="@ImgUrl[i].ToString()" alt="" />
+                    </div>                    
+                    <div class="cont-news">
+                        <div class="news-title">
+                            <a href="/News/Details/@item.NewsID">@item.Title</a>
+                        </div>
+                        <div class="news-des">@item.Description
+                            <div class="readmore">Read more ...</div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+            }
+            i++;
+        }        
+    </ul>
+</div>

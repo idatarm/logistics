@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    
+    <link href="@Url.Content("~/Content/bootstrap/css/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/bootstrap/css/bootstrap-responsive.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/jMenu/css/jmenu.css")" rel="stylesheet" type="text/css" />
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js" type="text/javascript"></script> 
+    <script src="@Url.Content("~/Scripts/bootstrap/bootstrap.min.js")"  type="text/javascript"></script>       
+    <script src="@Url.Content("~/Content/jMenu/js/jquery.js")"  type="text/javascript"></script>      
+    <script src="@Url.Content("~/Content/jMenu/js/jquery-ui.js")"  type="text/javascript"></script>  
+    <script src="@Url.Content("~/Content/jMenu/js/jMenu.jquery.min.js")"  type="text/javascript"></script>  
+
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,800&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#myCarousel').carousel({
+                interval: 4000
+            });
+
+            $('#myCarousel-pro1').carousel({
+                interval: 3000
+            });
+            $('#myCarousel-pro2').carousel({
+                interval: 2500
+            });
+            $('#myCarousel-pro3').carousel({
+                interval: 3000
+            });
+        });
+
+        </script>
+</head>
+@helper Truncate(string input, int length_word)
+    {
+        string[] src = input.Trim().Split(' ');
+        string temp = "";
+        if(src.Length < length_word)
+            {
+                @input   
+            }
+        else
+        {
+            for (int i = 0; i < length_word; i++)
+            {
+                temp += (src[i] + " ");
+            }
+            @temp <text>...</text>
+        }
+    }
+@{
+    Logistics.Models.LogisticsDBContent db = new Logistics.Models.LogisticsDBContent();
+    var news_layout = db.News.OrderByDescending(n => n.DateTime).Skip(0).Take(4).ToList();
+}
+<body>
+    <div class="page"> 
+        <div class="layout">      
+            <div id="header">                
+                                   
+            </div>
+            <div id="navigation">
+                <div class="navbar">                    
+                    <div class="navbar-inner">
+                    <a class="brand" href="/">Home</a>
+                    <ul class="nav">
+                        <li></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    @Html.ActionLink("Overview", "About", "Home")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Quality, Safety and Environmental Management Policy", "About2", "Home")
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Overview", "Overview", "Service")</li>
+                                <li>@Html.ActionLink("Customs Brokerage", "CustomsBrokerage", "Service")</li>
+                                <li>@Html.ActionLink("Logistics Management", "LogisticsManagement", "Service")</li>
+                                <li>@Html.ActionLink("Freight Transportation", "FreightTransportation", "Service")</li>
+                                <li>@Html.ActionLink("Agency Business", "AgencyBusiness", "Service")</li>
+                            </ul>
+                        </li> 
+                        <li>@Html.ActionLink("News", "Manage", "News")</li>                        
+                        <li><a href="#">Organization</a></li>
+                        <li>@Html.ActionLink("Contact Us", "Contacts", "Home")</li>
+                    </ul>
+                    <form class="navbar-form pull-right" action="">
+                          <div id="input-search">
+                            <input type="text" placeholder="Search" />
+                          </div>
+                          <div id="input-btn"></div>
+                        </form>
+                    </div>
+                </div>        
+            </div>
+            <div id="pageBody5">    
+                <div class="sidebar">   
+                    <div class="post-list">
+                        <h3> 
+                            Popular Posts
+                            <a style="float:right; padding-right:15px;margin-top:-2px;"><img src="../../Content/themes/base/images/icons/pin.png" alt="" /></a>
+                        </h3>
+                        <p></p>
+                        @{ int i = 0; string title = "";}
+
+                        @foreach (var item in @news_layout)
+                        {
+                            i++;
+                            title = HtmlAgilityPack.HtmlEntity.DeEntitize(@Truncate(item.Title, 12).ToString());
+                            <div class="post">
+                                <div class="post post-number"><h4>@i</h4></div>
+                                <div class="post post-right">
+                                    @Html.ActionLink(title, "Details", "News", new { id = item.NewsID }, null)
+                                    <div class="date">
+                                        <p>@item.DateTime</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        }                       
+                    </div>
+                                       
+                    <div style="padding-top:20px" >
+                        <h3> Exchange rates</h3>                        
+                    </div>
+                    <div class="exchange-rates" style="margin-top:0px">
+                    <div class="iframe">
+	                	<iframe src="http://www.eximbank.com.vn/WebsiteExrate1/exchange.aspx" marginheight="0" marginwidth="0" scrolling="no" width="300px" frameborder="0" height="345px"> </iframe>
+                    </div>                    
+                    </div>  
+                    
+                                    
+                    <div style="padding-top:30px; padding-bottom:0px" >
+                        <h3> Connect with us</h3> 
+                    </div>
+                    <div class="contact-webs2">
+                        <table style="margin-left:20px;">
+                            <tr>
+                                <td style="width:100px;"><i class="icon-user"></i>  Call Us :   </td>
+                                <td><strong>0904.006.474</strong> Mr. Viet</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><strong>0904.606.474</strong> Ms. Ngoc</td>
+                            </tr>
+                            <tr>
+                                <td><i class="icon-envelope"></i>  Email Us :</td>
+                                <td><a>sales@nii.com.vn </a></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><a>kimngoc@nii.com.vn </a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style="padding-top:20px" >
+                        <h3> My Partners</h3> 
+                    </div>
+                    <div class="weather" style="margin-top:0px; margin-bottom:20px;">
+                    </div>
+                </div>   
+            
+                <div id="content">                   
+                    @RenderBody()
+                </div>
+            </div>
+            <div id="footer">
+                <div class="row-fluid">
+                    <div class="span2">
+                        <div class="iconset">
+                            <div class="icon fb"></div>
+                            <div class="icon g-plus"></div>
+                            <div class="clear" style="padding-bottom:15px;"></div>
+                            <div class="icon rss"></div>
+                            <div class="icon twitter"></div>                            
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="span5"  style="padding:10px 0 0 30px;">
+                        <h4 style="font-size:20px; font-weight:600">Contact Us</h4>
+                        <p>Address: Binh An Ward, District 2 Ho Chi Minh City Viet Nam</p>
+                        <p>Tel: (84 8) 3 740 2081  -  (84 8) 3 740 2082</p>
+                        <p>Email: <a href="">info@nii.com.vn</a>  <span style="padding-left:10px">  Fax: <a href=""> (84 8) 3 740 2080</a></span></p>
+                        <p>Copyright © 2013 @Html.ActionLink("Logistics", "Index", "News")  Design by <a href="">LuanNT Group</a></p>
+                    </div>
+                    <div class="span5">                   
+                        <img src="../../Content/themes/base/images/footer-logo.png" alt=""/>                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
